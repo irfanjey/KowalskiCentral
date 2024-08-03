@@ -1,6 +1,6 @@
 .analysis{
     height: 100vh;
-    background: linear-gradient(180deg, #11bde4, #e1ffea22 60%);
+    background: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
 }
@@ -9,36 +9,38 @@
 }
 .search_bar input{
     width: 700px;
-    height: 60px;
+    height: 64px;
     margin-left: 30px;
-    border: none;
+    border: solid 2px rgb(232, 217, 16);
     outline: none;
     color: #000000;
     font-size: 16px;
     font-weight: 500;
-    border: solid 1px black;
     border-radius: 71px;
     padding-left: 30px;
 }
 .search_bar button{
     width: 150px;
     height: 65px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: rgb(232, 217, 16);
+    color: black;
     font-size: 16px;
     font-weight: 550;
     cursor: pointer;
     border-radius: 70px;
-    margin-left: -55px;
+    margin-left: -60px;
+    outline: none;
+}
+.search_bar button:active{
+    transform: scale(0.98);
 }
 .recent_products{
-    border: 1px solid black;
     width: 300px;
-    margin-top: -1px;
-    background: white;
+    background: rgb(201, 198, 198);
     text-decoration: underline;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Courier New', Courier, monospace;
     font-size: 20px;
     overflow: scroll;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
