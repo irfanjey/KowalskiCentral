@@ -1,12 +1,13 @@
 .navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding-left: 16px;
     padding-right: 16px;
     box-shadow: 0 1px 3px -2px black;
     background-color: black;
     padding-top: 16px;
     padding-bottom: 16px;
+    align-items: center;
 }
 .logo_img{
     width: 70px;
@@ -15,12 +16,13 @@
 .nav-logo{
     display: flex;
     align-items: center;
-    gap: 12px
+    gap: 12px;
+    padding-left: 30px;
 }
 .logo_text p{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 28px;
     color: rgb(224, 222, 109);
     margin: 0px;
 }
