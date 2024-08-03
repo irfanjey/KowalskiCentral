@@ -1,0 +1,28 @@
+.signuppage {
+    height: 100vh;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.signuppage-center-piece {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    width: 300px;
+}
+
+.signuppage-namefield {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signuppage-center-piece > button {
+    width: 100%;
+}
