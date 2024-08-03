@@ -60,3 +60,14 @@
   align-items: center;
   width: 100%;
 }
+.recent_products {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: rgb(201, 198, 198);
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  overflow: scroll;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
