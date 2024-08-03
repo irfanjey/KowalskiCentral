@@ -26,10 +26,19 @@ const Analysis = () => {
         body: JSON.stringify({ url }),
       });
 
+<<<<<<< Updated upstream
       if (response.ok) {
         const data = await response.json();
         setProductInfo(data);
         console.log("Product Data:", data);
+=======
+      if (res.ok) {
+        console.log(productURL);
+        // Example: Add the product URL to the list of recent products
+        setRecentProducts([...recentProducts, productURL]);
+        // Clear the input field
+        setProductURL('');
+>>>>>>> Stashed changes
       } else {
         console.error("Failed to fetch product data");
       }
@@ -42,31 +51,31 @@ const Analysis = () => {
     <div className="analysis">
       <div className="recent_products">
         <p>Recently Searched</p>
-        <div className="recently-viewed-col">
-          <img src="https://m.media-amazon.com/images/I/61RvZWYRt4L._SX679_.jpg" />
-          <p>
-            L’Oréal Paris Colour Riche Original Creamy, Hydrating Satin Lipstick
-            with Argan Oil and Vitamin E, Fairest Nude , 1 Count
-          </p>
-          <img src="https://m.media-amazon.com/images/I/31jBSwNjTRL._SX300_SY300_QL70_FMwebp_.jpg" />
-          <p>
-            Maybelline Super Stay Vinyl Ink Longwear No-Budge Liquid Lipcolor
-            Makeup, Highly Pigmented Color and Instant Shine, Captivated, Pink
-            Lipstick, 0.14 fl oz, 1 Count
-          </p>
+        <div>
+<<<<<<< Updated upstream
+          {/* Add your recently searched products display logic here */}
+=======
+          {recentProducts.map((url, index) => (
+            <p key={index}>{url}</p>
+          ))}
+>>>>>>> Stashed changes
         </div>
       </div>
-      <div className="centre">
-        <h1>Kowalski Analysis</h1>
-        <div className="search_bar">
-          <input
-            type="text"
-            placeholder="Paste Amazon URL to product page"
-            value={url}
-            onChange={handleInputChange}
-          />
-          <button onClick={handleSearchClick}>Search</button>
-        </div>
+      <div className='search_bar'>
+        <input
+<<<<<<< Updated upstream
+          type="text"
+          placeholder='Paste Amazon URL to product page'
+          value={url}
+          onChange={handleInputChange}
+=======
+          type='text'
+          placeholder='Paste Amazon URL to product page'
+          value={productURL}
+          onChange={(e) => setProductURL(e.target.value)}
+>>>>>>> Stashed changes
+        />
+        <button onClick={handleSearchClick}>Search</button>
       </div>
       {productInfo && (
         <div className="product_info">
