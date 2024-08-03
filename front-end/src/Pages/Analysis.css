@@ -1,9 +1,15 @@
+.analysis{
+    height: 100vh;
+    background: linear-gradient(180deg, #11bde4, #e1ffea22 60%);
+    display: flex;
+    flex-direction: row;
+}
 .search_bar{
-    margin-top: 100px;
+    padding-top: 100px;
 }
 .search_bar input{
-    width: 500px;
-    height: 50px;
+    width: 700px;
+    height: 60px;
     margin-left: 30px;
     border: none;
     outline: none;
@@ -11,14 +17,28 @@
     font-size: 16px;
     font-weight: 500;
     border: solid 1px black;
+    border-radius: 71px;
+    padding-left: 30px;
 }
 .search_bar button{
-    width: 210px;
-    height: 55px;
-    background-color: rgb(6, 184, 255);
-    color: black;
+    width: 150px;
+    height: 65px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: 550;
     cursor: pointer;
-    margin-right: -10px;
+    border-radius: 70px;
+    margin-left: -55px;
+}
+.recent_products{
+    border: 1px solid black;
+    width: 300px;
+    margin-top: -1px;
+    background: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    overflow: scroll;
 }
