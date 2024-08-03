@@ -70,7 +70,7 @@ const Signup = () => {
         <button
           type="submit"
           className="loginpage-button"
-          onClick={handleSubmit}
+          onClick={navigate("/")}
           disabled={submitDisabled}
         >
           Create Account

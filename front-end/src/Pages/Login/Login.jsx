@@ -52,7 +52,7 @@ const Login = () => {
         <button
           type="submit"
           className="loginpage-button"
-          onClick={handleSubmit}
+          onClick={navigate("/")}
         >
           Login
         </button>

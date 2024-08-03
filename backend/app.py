@@ -29,8 +29,8 @@ def get_product_info(asin):
 
 @app.route("/")
 def home():
-    online_users = mongo.db.users.find({"online": True})
-    return online_users
+    return "Hello World"
+
 
 @app.route("/findproductdeets", methods=['GET'])
 def productinfo():
