@@ -13,11 +13,6 @@ const Navbar = () => {
               <p>Central</p>
             </div>
         </div>
-        <div>
-          <ul>
-            <li>Analysis</li>
-          </ul>
-        </div>
     </div>
   )
 }
