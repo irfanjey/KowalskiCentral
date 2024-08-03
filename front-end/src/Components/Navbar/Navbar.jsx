@@ -1,8 +1,9 @@
-import React from 'react'
-import logo from '../Assets/kowalski_logo.png'
-import './Navbar.css'
+import React from 'react';
+import logo from '../Assets/kowalski_logo.png';
+import './Navbar.css';
 
 const Navbar = () => {
+  //const [menu, setMenu] = useState("home");
   return (
     <div className="navbar">
         <div className="nav-logo">
@@ -11,6 +12,11 @@ const Navbar = () => {
               <p>Kowalski</p>
               <p>Central</p>
             </div>
+        </div>
+        <div>
+          <ul>
+            <li>Analysis</li>
+          </ul>
         </div>
     </div>
   )
