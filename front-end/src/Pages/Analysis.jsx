@@ -24,19 +24,10 @@ const Analysis = () => {
         body: JSON.stringify({ url }),
       });
 
-<<<<<<< Updated upstream
       if (response.ok) {
         const data = await response.json();
         setProductInfo(data);
         console.log('Product Data:', data);
-=======
-      if (res.ok) {
-        console.log(productURL);
-        // Example: Add the product URL to the list of recent products
-        setRecentProducts([...recentProducts, productURL]);
-        // Clear the input field
-        setProductURL('');
->>>>>>> Stashed changes
       } else {
         console.error('Failed to fetch product data');
       }
@@ -50,28 +41,15 @@ const Analysis = () => {
       <div className='recent_products'>
         <p>Recently Searched</p>
         <div>
-<<<<<<< Updated upstream
           {/* Add your recently searched products display logic here */}
-=======
-          {recentProducts.map((url, index) => (
-            <p key={index}>{url}</p>
-          ))}
->>>>>>> Stashed changes
         </div>
       </div>
       <div className='search_bar'>
         <input
-<<<<<<< Updated upstream
           type="text"
           placeholder='Paste Amazon URL to product page'
           value={url}
           onChange={handleInputChange}
-=======
-          type='text'
-          placeholder='Paste Amazon URL to product page'
-          value={productURL}
-          onChange={(e) => setProductURL(e.target.value)}
->>>>>>> Stashed changes
         />
         <button onClick={handleSearchClick}>Search</button>
       </div>
