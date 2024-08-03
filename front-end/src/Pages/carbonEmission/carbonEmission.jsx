@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./Signup.css";
+import "./carbonEmission.css";
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 import Textbox from "../../Components/Textbox/Textbox";
 
-const Signup = () => {
+const CarbonEmission = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ const Signup = () => {
     if (submitDisabled) return;
     setSubmitDisabled(true);
 
-    let res = await fetch(`http://localhost:3000/signup`, {
+    let res = await fetch(`http://localhost:5000/getCarbonData`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const Signup = () => {
         <button
           type="submit"
           className="loginpage-button"
-          onClick={navigate("/")}
+          onClick={handleSubmit}
           disabled={submitDisabled}
         >
           Create Account
@@ -81,4 +81,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default CarbonEmission;

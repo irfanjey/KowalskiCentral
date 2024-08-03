@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import requests
+from flask_pymongo import PyMongo
 import re
 from flask_cors import CORS
 
@@ -27,7 +28,8 @@ def get_product_info(asin):
 
 @app.route("/")
 def home():
-    return "<p>Hello world</p>"
+    return "Hello World"
+
 
 @app.route("/findproductdeets", methods=['POST'])
 def productinfo():

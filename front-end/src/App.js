@@ -6,6 +6,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import CarbonCalculator from "./Pages/CarbonCalculator";
+import carbonEmission from "./Pages/carbonEmission/carbonEmission";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path={"/survey"} element={<carbonEmission />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<Analysis />} />

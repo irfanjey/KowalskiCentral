@@ -1,48 +1,73 @@
-.analysis{
-    height: 100vh;
-    background: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row;
+.analysis {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
 }
-.search_bar{
-    padding-top: 100px;
-    padding-left: 140px;
+.search_bar {
+  margin: 10px;
 }
-.search_bar input{
-    width: 700px;
-    height: 64px;
-    margin-left: 30px;
-    border: solid 2px rgb(232, 217, 16);
-    outline: none;
-    color: #000000;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 71px;
-    padding-left: 30px;
+.search_bar input {
+  width: 700px;
+  height: 64px;
+  margin-left: 30px;
+  border: solid 2px rgb(232, 217, 16);
+  outline: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 71px;
+  padding-left: 30px;
 }
-.search_bar button{
-    width: 150px;
-    height: 65px;
-    background-color: rgb(232, 217, 16);
-    color: black;
-    font-size: 16px;
-    font-weight: 550;
-    cursor: pointer;
-    border-radius: 70px;
-    margin-left: -60px;
-    outline: none;
+.search_bar button {
+  width: 150px;
+  height: 65px;
+  background-color: rgb(232, 217, 16);
+  color: black;
+  font-size: 16px;
+  font-weight: 550;
+  cursor: pointer;
+  border-radius: 70px;
+  margin-left: -60px;
+  outline: none;
 }
-.search_bar button:active{
-    transform: scale(0.98);
+.search_bar button:active {
+  transform: scale(0.98);
 }
-.recent_products{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    background: rgb(201, 198, 198);
-    font-weight: bold;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 18px;
-    overflow: scroll;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.recent_products {
+  width: 250px;
+  background: rgb(201, 198, 198);
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  overflow: scroll;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recently-viewed-col > img {
+  width: 100px;
+  height: 100px;
+}
+
+.recently-viewed-col > p {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.recent_products {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: rgb(201, 198, 198);
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  overflow: scroll;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
