@@ -1,5 +1,15 @@
 import React from "react";
 
-export default function Dashboard() {
-  return <div>Dashboard</div>;
+const Dashboard = () => {
+  return (
+    <div className="dashboard">
+        <div className='recent_products'>
+          <p>Recently Searched</p>
+          <div>
+              
+          </div>
+        </div>
+    </div>
+  )
 }
+export default Dashboard
