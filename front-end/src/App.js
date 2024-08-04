@@ -5,6 +5,7 @@ import Analysis from "./Pages/Analysis";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
+import CarbonCalculator from "./Pages/CarbonCalculator";
 import carbonEmission from "./Pages/carbonEmission/carbonEmission";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<Analysis />} />
           <Route path="/analysis" element={<Dashboard />} />
+          <Route path="/calculator" element={<CarbonCalculator />} />
         </Routes>
       </BrowserRouter>
     </div>

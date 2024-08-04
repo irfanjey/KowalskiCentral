@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Analysis = () => {
   const [url, setUrl] = useState("");
   const [productInfo, setProductInfo] = useState(null);
+  const [openaiResponse, setOpenaiResponse] = useState('');
   const [recentlySearched, setRecentlySearched] = useState([
     {
       imgUrl: "https://m.media-amazon.com/images/I/71nZXovINXL._SX679_.jpg",
@@ -39,8 +40,9 @@ const Analysis = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setProductInfo(data);
-        console.log("Product Data:", data);
+        setProductInfo(data.product_info);
+        setOpenaiResponse(data.openai_response);
+        console.log('Product Data:', data);
       } else {
         console.error("Failed to fetch product data");
       }
