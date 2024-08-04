@@ -9,8 +9,7 @@ const Analysis = () => {
   const [recentlySearched, setRecentlySearched] = useState([
     {
       imgUrl: "https://m.media-amazon.com/images/I/71nZXovINXL._SX679_.jpg",
-      title:
-        "Maybelline Super Stay Vinyl Ink Longwear No-Budge Liquid Lipcolor",
+      title: "Maybelline Super Stay Vinyl Ink Longwear No-Budge Liquid Lipcolor",
     },
     {
       imgUrl: "https://m.media-amazon.com/images/I/61RvZWYRt4L._SX679_.jpg",
@@ -23,7 +22,9 @@ const Analysis = () => {
   const handleInputChange = (e) => {
     setUrl(e.target.value);
   };
+
   useEffect(() => {}, []);
+
   const handleSearchClick = async () => {
     if (!url) {
       alert("Please enter a URL");
@@ -61,8 +62,8 @@ const Analysis = () => {
       <div className="recently_searched">
         <h2>Recently Searched</h2>
         <div>
-          {recentlySearched.map((item) => (
-            <div key={item.id} className="recently_searched_item">
+          {recentlySearched.map((item, index) => (
+            <div key={index} className="recently_searched_item">
               <img src={item.imgUrl} alt={item.title} />
               <p>{item.title}</p>
             </div>

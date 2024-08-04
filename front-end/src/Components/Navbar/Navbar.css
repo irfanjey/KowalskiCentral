@@ -5,7 +5,7 @@
     align-items: center;
     padding: 16px;
     box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.3); /* Slightly lighter shadow for better look */
-    background-color: black;
+    background-color: #0A6847;
   }
   
   /* Logo Styling */
@@ -26,7 +26,7 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 28px;
-    color: rgb(224, 222, 109);
+    color: #F6E9B2;
     margin: 0;
   }
   
@@ -45,10 +45,11 @@
   
   /* Styling for Navigation Links */
   .nav-links a {
-    color: rgb(224, 222, 109); /* Match the logo text color */
+    color: #F6E9B2; /* Match the logo text color */
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
+    margin-right: 40px;
   }
   
   /* Hover Effect for Links */
@@ -63,7 +64,7 @@
   
   /* Common Button Styling */
   .nav_login button {
-    background-color: rgb(224, 222, 109);
+    background-color: #F6E9B2;
     color: black;
     border: none;
     padding: 8px 16px;
