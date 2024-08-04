@@ -1,33 +1,81 @@
-.navbar{
+/* Navbar Container Styling */
+.navbar {
     display: flex;
-    justify-content: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    box-shadow: 0 1px 3px -2px black;
-    background-color: black;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    justify-content: space-between; /* Updated to space out the logo and links */
     align-items: center;
-}
-.logo_img{
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.3); /* Slightly lighter shadow for better look */
+    background-color: black;
+  }
+  
+  /* Logo Styling */
+  .logo_img {
     width: 70px;
     height: 90px;
-}
-.nav-logo{
+  }
+  
+  /* Logo and Text Container */
+  .nav-logo {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding-left: 30px;
-}
-.logo_text p{
-    font-family:'Courier New', Courier, monospace;
+  }
+  
+  /* Logo Text Styling */
+  .logo_text p {
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 28px;
     color: rgb(224, 222, 109);
-    margin: 0px;
-}
-.logo_text{
+    margin: 0;
+  }
+  
+  /* Flex Container for Logo Text */
+  .logo_text {
     display: flex;
     flex-direction: column;
     align-items: start;
-}
+  }
+  
+  /* Navigation Links Container */
+  .nav-links {
+    display: flex;
+    gap: 16px; /* Space between links */
+  }
+  
+  /* Styling for Navigation Links */
+  .nav-links a {
+    color: rgb(224, 222, 109); /* Match the logo text color */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Hover Effect for Links */
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login Button Container */
+  .nav_login {
+    display: flex;
+  }
+  
+  /* Common Button Styling */
+  .nav_login button {
+    background-color: rgb(224, 222, 109);
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 8px; /* Space between buttons */
+  }
+  
+  /* Button Hover Effect */
+  .nav_login button:hover {
+    background-color: rgb(194, 194, 99);
+  }
+  
