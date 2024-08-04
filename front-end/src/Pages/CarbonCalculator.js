@@ -1,6 +1,6 @@
-// src/Pages/CarbonCalculator.js
-import React, { useState } from 'react';
-import InputField from '../Components/InputField';
+import React, { useState } from "react";
+import "./CarbonCalculator.css";
+import InputField from "../Components/InputField";
 
 const emissionFactors = {
   car: 0.24, // kg CO2 per mile
@@ -9,9 +9,9 @@ const emissionFactors = {
 };
 
 const CarbonCalculator = () => {
-  const [carMiles, setCarMiles] = useState('');
-  const [flightKm, setFlightKm] = useState('');
-  const [energyKWh, setEnergyKWh] = useState('');
+  const [carMiles, setCarMiles] = useState("");
+  const [flightKm, setFlightKm] = useState("");
+  const [energyKWh, setEnergyKWh] = useState("");
 
   const calculateEmissions = () => {
     const carEmissions = carMiles * emissionFactors.car;
@@ -22,24 +22,38 @@ const CarbonCalculator = () => {
   };
 
   return (
-    <div>
-      <h1>Carbon Emissions Calculator</h1>
-      <InputField
-        label="Car travel (miles):"
-        value={carMiles}
-        onChange={(e) => setCarMiles(e.target.value)}
-      />
-      <InputField
-        label="Flight travel (km):"
-        value={flightKm}
-        onChange={(e) => setFlightKm(e.target.value)}
-      />
-      <InputField
-        label="Energy usage (kWh):"
-        value={energyKWh}
-        onChange={(e) => setEnergyKWh(e.target.value)}
-      />
-      <h2>Total Emissions: {calculateEmissions().toFixed(2)} kg CO2</h2>
+    <div className="calculator-container">
+      <h1 className="calculator-title">Carbon Emissions Calculator</h1>
+      <div className="input-field">
+        <label className="input-label">Car travel (miles):</label>
+        <input
+          type="number"
+          value={carMiles}
+          onChange={(e) => setCarMiles(e.target.value)}
+          className="input-input"
+        />
+      </div>
+      <div className="input-field">
+        <label className="input-label">Flight travel (km):</label>
+        <input
+          type="number"
+          value={flightKm}
+          onChange={(e) => setFlightKm(e.target.value)}
+          className="input-input"
+        />
+      </div>
+      <div className="input-field">
+        <label className="input-label">Energy usage (kWh):</label>
+        <input
+          type="number"
+          value={energyKWh}
+          onChange={(e) => setEnergyKWh(e.target.value)}
+          className="input-input"
+        />
+      </div>
+      <h2 className="total-emissions">
+        Total Emissions: {calculateEmissions().toFixed(2)} kg CO2
+      </h2>
     </div>
   );
 };

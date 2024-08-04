@@ -15,6 +15,13 @@ const Dashboard = () => {
   let recentlySearched = location.state.recentlySearched;
   let productInfo = location.state.data.product_info;
   let openAIResponse = location.state.data.openai_response;
+  recentlySearched = [
+    ...recentlySearched,
+    {
+      imgUrl: productInfo.product.images[0].link,
+      title: productInfo.product.title_excluding_variant_name,
+    },
+  ];
 
   return (
     <div className="dashboard">
