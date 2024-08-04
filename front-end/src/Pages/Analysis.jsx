@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Analysis.css";
 import { useNavigate } from "react-router-dom";
+import "./Analysis.css";
 
 const Analysis = () => {
   const [url, setUrl] = useState("");
@@ -15,6 +15,18 @@ const Analysis = () => {
       imgUrl: "https://m.media-amazon.com/images/I/61RvZWYRt4L._SX679_.jpg",
       title: "L’Oréal Paris Colour Riche Original Creamy",
     },
+    {
+      imgUrl: "https://m.media-amazon.com/images/I/81X4xNzKHyL._AC_SX679_.jpg",
+      title: "Sharpie Permanent Markers, Fine Point, Assorted Colours",
+    },
+    {
+      imgUrl: "https://m.media-amazon.com/images/I/715MyaLxCdL._AC_SX679_.jpg",
+      title: "Maybelline New York Fit Me Matte + Poreless Foundation Makeup, Ultra-Lightweight Formula Controls Shine",
+    },
+    {
+      imgUrl: "https://m.media-amazon.com/images/I/61XDmzkDIYL._SL1500_.jpg",
+      title: "Ralph Lauren - Polo Blue - Parfum - Men's Cologne - Aquatic & Fresh - With Citrus, Oakwood, and Vetiver - Intense Fragrance",
+    }
   ]);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
