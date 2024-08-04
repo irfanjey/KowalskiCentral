@@ -1,37 +1,76 @@
-.dashboard{
-    display: flex;
-    flex-direction: row;
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
 }
-.recently_searched{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 100vh;
-    background: rgb(201, 198, 198);
-    font-weight: bold;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 18px;
-    overflow: scroll;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 10px;
 }
-.searched_product{
-    display: flex;
-    flex-direction: column;
-    background: rgb(240, 235, 208);
-    width: 400px;
-    height: 100vh;
+
+.recently_searched,
+.searched_product,
+.product_analysis {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
 }
-.product_analysis{
-    display: flex;
-    flex-direction: column;
-    background: rgb(247, 238, 230);
-    width: 400px;
-    height: 100vh;
+
+.recently_searched {
+  flex: 1;
 }
-.related_products{
-    display: flex;
-    flex-direction: column;
-    background: rgb(244, 245, 242);
-    width: 500px;
-    height: 100vh;
+
+.recently_searched h2,
+.searched_product h2,
+.product_analysis h2 {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.recently_searched_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.recently_searched_item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.searched_product {
+  flex: 2;
+}
+
+.product_image {
+  width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.product_details p {
+  margin: 5px 0;
+}
+
+.product_analysis {
+  flex: 3;
+}
+
+.markdown_content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
