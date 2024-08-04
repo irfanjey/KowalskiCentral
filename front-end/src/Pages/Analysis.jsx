@@ -4,6 +4,7 @@ import './Analysis.css';
 const Analysis = () => {
   const [url, setUrl] = useState('');
   const [productInfo, setProductInfo] = useState(null);
+  const [openaiResponse, setOpenaiResponse] = useState('');
 
   const handleInputChange = (e) => {
     setUrl(e.target.value);
@@ -26,7 +27,8 @@ const Analysis = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setProductInfo(data);
+        setProductInfo(data.product_info);
+        setOpenaiResponse(data.openai_response);
         console.log('Product Data:', data);
       } else {
         console.error('Failed to fetch product data');
@@ -53,13 +55,7 @@ const Analysis = () => {
         />
         <button onClick={handleSearchClick}>Search</button>
       </div>
-      {productInfo && (
-        <div className='product_info'>
-          <h2>Product Information</h2>
-          <pre>{JSON.stringify(productInfo, null, 2)}</pre>
-        </div>
-      )}
-    </div>
+      </div>
   );
 };
 
