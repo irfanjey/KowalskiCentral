@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 import requests
-from flask_pymongo import PyMongo
 import re
 from flask_cors import CORS
 from openai import OpenAI
@@ -63,7 +62,7 @@ def productinfo():
     openai_response = query_openai(prompt)
 
     return jsonify({
-        "product_info": "This product",
+        "product_info": product_info,
         "openai_response": openai_response
     })
 
