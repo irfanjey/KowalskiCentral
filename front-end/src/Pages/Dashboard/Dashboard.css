@@ -1,10 +1,37 @@
-.recent_products{
-    width: 300px;
+.dashboard{
+    display: flex;
+    flex-direction: row;
+}
+.recently_searched{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
     background: rgb(201, 198, 198);
-    text-decoration: underline;
     font-weight: bold;
     font-family:'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 18px;
     overflow: scroll;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.searched_product{
+    display: flex;
+    flex-direction: column;
+    background: rgb(240, 235, 208);
+    width: 400px;
+    height: 100vh;
+}
+.product_analysis{
+    display: flex;
+    flex-direction: column;
+    background: rgb(247, 238, 230);
+    width: 400px;
+    height: 100vh;
+}
+.related_products{
+    display: flex;
+    flex-direction: column;
+    background: rgb(244, 245, 242);
+    width: 500px;
+    height: 100vh;
 }
