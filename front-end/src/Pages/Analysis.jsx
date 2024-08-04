@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Analysis.css";
+import { useNavigate } from "react-router-dom";
 
 const Analysis = () => {
   const [url, setUrl] = useState("");
@@ -16,6 +17,7 @@ const Analysis = () => {
         "L’Oréal Paris Colour Riche Original Creamy, Hydrating Satin Lipstick with Argan Oil and Vitamin E, Fairest Nude , 1 Count",
     },
   ]);
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setUrl(e.target.value);
@@ -42,9 +44,13 @@ const Analysis = () => {
       } else {
         console.error("Failed to fetch product data");
       }
+      navigate("/analysis", { state: { data: productInfo, recentlySearched } });
     } catch (error) {
       console.error("Error:", error);
     }
+    navigate("/analysis", {
+      state: { data: { productInfo, recentlySearched } },
+    });
   };
 
   return (
