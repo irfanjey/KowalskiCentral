@@ -58,7 +58,7 @@ def productinfo():
     product_info = get_product_info(asin)
     
     # Query OpenAI with product info
-    prompt = f"based on this json data suggest if should buy this product based on it's environmental impact and give me a definitive answer based on the ingredients, and general manufacturing processes of the product. After that, format the answer in a short format that states yes or no in the start and then give me short bullet points of why or why not to buy the specific product. If no, then elaborate on eco friendly alternatives that do least collective harm to the environment taking into account all relevant factors and some common sense: {product_info}"
+    prompt = f"based on this json data, suggest if the user should buy this product based on it's environmental impact and give me a definitive answer based on the material composition, manufacturing process, transportation and end of life disposal of the product. Following which, Summarize with short concise bullet points on why or why not to buy this specific product. If no, then elaborate on eco friendly alternatives that do least collective harm to the environment taking all relevant factors into account: {product_info}"
     openai_response = query_openai(prompt)
 
     return jsonify({
