@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Analysis.css";
 import { useNavigate } from "react-router-dom";
 
@@ -17,12 +17,13 @@ const Analysis = () => {
       title: "L’Oréal Paris Colour Riche Original Creamy",
     },
   ]);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setUrl(e.target.value);
   };
-
+  useEffect(() => {}, []);
   const handleSearchClick = async () => {
     if (!url) {
       alert("Please enter a URL");
@@ -38,6 +39,7 @@ const Analysis = () => {
       });
 
       if (response.ok) {
+        setLoading(true);
         const data = await response.json();
         console.log(data);
         setProductInfo(data.product_info);
@@ -76,7 +78,9 @@ const Analysis = () => {
             value={url}
             onChange={handleInputChange}
           />
-          <button onClick={handleSearchClick}>Search</button>
+          <button onClick={handleSearchClick}>
+            {loading ? "Loading..." : "Search"}
+          </button>
         </div>
       </div>
       {productInfo && (

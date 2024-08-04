@@ -12,6 +12,10 @@ const Signup = () => {
   const [submitDisabled, setSubmitDisabled] = useState(false);
   const navigate = useNavigate();
 
+  const handleNavigate = () => {
+    navigate("/");
+  };
+
   const handleSubmit = async () => {
     console.log("Called");
     if (submitDisabled) return;
@@ -70,7 +74,7 @@ const Signup = () => {
         <button
           type="submit"
           className="loginpage-button"
-          onClick={navigate("/")}
+          onClick={handleNavigate}
           disabled={submitDisabled}
         >
           Create Account
