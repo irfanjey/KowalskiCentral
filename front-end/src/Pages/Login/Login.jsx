@@ -11,6 +11,10 @@ const Login = () => {
   const [errors, setErrors] = useState([]);
   const navigate = useNavigate();
 
+  const handleNavigate = () => {
+    navigate("/");
+  };
+
   const handleSubmit = async () => {
     // Make a request to the login endpoint
     try {
@@ -52,7 +56,7 @@ const Login = () => {
         <button
           type="submit"
           className="loginpage-button"
-          onClick={navigate("/")}
+          onClick={handleNavigate}
         >
           Login
         </button>
